@@ -9,16 +9,15 @@ for file in $(ls "$CWD/files"); do
     extension="${filename##*.}"
     filename="${filename%.*}"
     echo "$filename"
-    if test -f "$CWD/../htmlFiles/$filename.html"; then
+    if test -f "$CWD/htmlFiles/$filename.html"; then
         echo "$file exists."
     else
         cd files
         pdf2htmlEX "$file"
-        mv "$filename.html" ../htmlFiles
+        mv "$filename.html" ../htmlFiles/
         cd .. 
         git add .
         git commit -m "$filename.html"
         git push origin master
     fi
-    exit
 done
