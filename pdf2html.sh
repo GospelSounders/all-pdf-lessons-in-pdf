@@ -21,3 +21,6 @@ for file in $(ls "$CWD/files"); do
         # git push origin master
     fi
 done
+git add .
+git commit -m "html files"
+git push origin master
