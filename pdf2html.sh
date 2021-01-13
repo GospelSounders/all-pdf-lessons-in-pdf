@@ -16,8 +16,8 @@ for file in $(ls "$CWD/files"); do
         pdf2htmlEX "$file"
         mv "$filename.html" ../htmlFiles/
         cd .. 
-        git add .
-        git commit -m "$filename.html"
-        git push origin master
+        # git add .
+        # git commit -m "$filename.html"
+        # git push origin master
     fi
 done
