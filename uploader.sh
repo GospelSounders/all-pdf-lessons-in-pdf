@@ -13,7 +13,7 @@ for file in $(ls "$SOURCE_DIR" |grep '.pdf'); do
     # FILE=$(basename "$file")
     # echo "$FILE"
     # echo "$CWD/$file"
-    if test -f "$CWD/$file"; then
+    if test -f "$CWD/files/$file"; then
         echo "$file exists."
     else
         cp "$SOURCE_DIR/$file" "$CWD/files/$file"
