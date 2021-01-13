@@ -7,7 +7,7 @@ SOURCE_DIR="/media/brian/Store/Gospel Sounders/Periodicals/SSQ"
 CWD=$(pwd)
 mkdir -p files
 
-for file in $(ls "$SOURCE_DIR" |grep '.pdf'); do 
+for file in $(ls "$SOURCE_DIR" |grep '.pdf$'); do 
 # for file in $(ls "$SOURCE_DIR/"*.pdf); do 
     echo "$file"
     # FILE=$(basename "$file")
