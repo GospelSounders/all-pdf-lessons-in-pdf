@@ -12,9 +12,10 @@ for file in $(ls "$CWD/files"); do
     if test -f "$CWD/../htmlFiles/$filename.html"; then
         echo "$file exists."
     else
-        cp "$SOURCE_DIR/$file" "$CWD/files/$file"
-        echo "---->"
-        exit
+        cd files
+        pdf2htmlEX "$file"
+        mv "$filename.html" ../htmlFiles
+        cd .. 
         git add .
         git commit -m "$filename.html"
         git push origin master
