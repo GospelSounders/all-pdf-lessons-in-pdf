@@ -15,6 +15,6 @@ for file in $(ls "$SOURCE_DIR" |grep '.html$'); do
         ./removeImages.js "htmlFiles/$file" "htmlFilesNoImages/$file"
         git add .
         git commit -m "$file"
-        GIT_SSH_COMMAND='ssh -i /tmp/gitkey -o IdentitiesOnly=yes git push origin master'
+        GIT_SSH_COMMAND='ssh -i /tmp/gitkey -o IdentitiesOnly=yes' git push origin master
     fi
 done
